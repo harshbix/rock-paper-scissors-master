@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import  Board  from "./components/Board";
+import Container from './components/Container';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <>
      <div>
 
-        <Board />
+        <Container />
       
      </div>
     </>
