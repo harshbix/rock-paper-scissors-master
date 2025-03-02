@@ -5,7 +5,7 @@ function Board() {
     return (
         <>
         <div className="board-container">
-                jkhskdhajdskjah
+                This is the board
         </div>
         
         </>
