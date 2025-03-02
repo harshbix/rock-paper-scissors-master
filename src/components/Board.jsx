@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function Board() {
     return (
         <>
-        <div className="board-container ">
+        <div className="board-container">
                 jkhskdhajdskjah
         </div>
         
