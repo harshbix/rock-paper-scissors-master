@@ -9,7 +9,7 @@ function App() {
   return (
     <>
      <div>
-      <button className="btn btn-primary btn-lg">Click Me</button>
+      <button className="btn btn-primary btn-lg">PLAY AGAIN</button>
      </div>
     </>
   )
