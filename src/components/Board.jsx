@@ -1,5 +1,15 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 function Board() {
-    return <h2>I am a Board!</h2>;
+    return (
+        <>
+        <div className="board-container ">
+                jkhskdhajdskjah
+        </div>
+        
+        </>
+    );
   }
   
 
