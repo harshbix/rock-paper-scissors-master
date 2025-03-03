@@ -9,10 +9,8 @@ function App() {
 
   return (
     <>
-     <div>
-
+     <div className='App'>
         <Container />
-      
      </div>
     </>
   )
