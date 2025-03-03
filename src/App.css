@@ -16,17 +16,20 @@
 }
 .board-container {
   display: grid;
-  grid-template-columns: 11fr 1.5fr;
+  grid-template-columns: 11fr 2fr;
   border: 2px solid hsl(217, 16%, 45%);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .items {
   display: grid;
   grid-template-rows: repeat(1fr);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 3rem;
   gap: 0;
-  line-height: 1;
+}
+.items span
+{
+    line-height: 0.8;
 }
 
 .all {
@@ -41,21 +44,39 @@
 .score span
 {
     color: hsl(229, 64%, 46%);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 3px;
+    font-size: .8rem;
+    font-weight: 550;
+    letter-spacing: 2px;
     margin-bottom: 0;
+    line-height: 0.5;
 }
 .score .no {
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-weight: 700;
   color: hsl(229, 25%, 31%);
-  margin-top: 0;
+  margin: 0;
   padding: 0 !important;
+  line-height: 0.8;
 }
 @media (min-width: 650px) {
 .cont-container {
     padding: 0 20% 0 20%;
 }
 
+}
+@media screen and (max-width: 650px){
+    .score span
+{
+    font-size: .4rem;
+}
+.score .no
+{
+    font-size: 2rem;
+}
+
+.items 
+{
+    font-size: 2rem;
+
+}   
 }
