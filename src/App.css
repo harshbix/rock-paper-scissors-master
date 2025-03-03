@@ -57,7 +57,7 @@
     line-height: 0.5;
 }
 .score .no {
-  font-size: 4rem;
+  font-size: 3.1rem;
   font-weight: 700;
   color: hsl(229, 25%, 31%);
   line-height: 0.8;
@@ -66,7 +66,7 @@
 }
 @media (min-width: 650px) {
 .cont-container {
-    padding: 0 20% 0 20%;
+    padding: 0 25% 0 25%;
 }
 
 }
@@ -100,6 +100,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 100px; /* Increased gap to make an equilateral triangle */
+    row-gap: 30px;
     position: relative;
     width: 300px;
     height: 300px;
@@ -158,10 +159,10 @@
 
 @media screen and (max-width: 650px) {
     .console-button {
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         padding: 10px;
-        border: 12px solid transparent;
+        border: 15px solid transparent;
     }
     .console-button.paper, .console-button.scissors {
         justify-self: center; /* Center the buttons horizontally on smaller screens */
