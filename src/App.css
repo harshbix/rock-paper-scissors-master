@@ -6,6 +6,12 @@
   font-family: Barlow Semi Condensed;
   color: white;
 }
+.attribution
+{
+    color: white;
+    text-align: center;
+    font-size: 20000px;
+}
 #root
 {
     background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
