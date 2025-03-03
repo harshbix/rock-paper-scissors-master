@@ -1,6 +1,22 @@
-@media (min-width: 768px) {
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.board-container
+{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    gap: 10px;
+    background-color: burlywood;
+}
+.items
+{
+    display: grid;
+    grid-template-rows: auto;
+}
+@media (min-width: 375px) {
     .cont-container {
-        background-color: red;
         padding: 0 15% 0 15%;
     }
 }
