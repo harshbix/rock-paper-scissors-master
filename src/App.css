@@ -85,17 +85,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    margin-top: 20px;
 }
 
 .console {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 100px; /* Increased gap to make an equilateral triangle */
     position: relative;
     width: 300px;
     height: 300px;
+    justify-content: center; /* Center the grid horizontally */
 }
 
 .console-body {
@@ -103,11 +105,11 @@
 }
 
 .console-button {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background: radial-gradient(circle, #ffffff 50%, #e0e0e0 100%);
-    border: 15px solid transparent;
+    border: 25px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,6 +117,11 @@
     padding: 20px;
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3),
                 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.console-button:hover {
+    transform: scale(1.1);
 }
 
 .console-button img {
@@ -126,14 +133,14 @@
     border-color: blue;
     grid-row: 1;
     grid-column: 1;
-    justify-self: end;
+    justify-self: end; /* Align the button to the end horizontally */
 }
 
 .console-button.scissors {
     border-color: orange;
     grid-row: 1;
     grid-column: 2;
-    justify-self: start;
+    justify-self: start; /* Align the button to the start horizontally */
 }
 
 .console-button.rock {
@@ -141,4 +148,16 @@
     grid-row: 2;
     grid-column: 1 / span 2;
     justify-self: center;
+}
+
+@media screen and (max-width: 650px) {
+    .console-button {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 12px solid transparent;
+    }
+    .console-button.paper, .console-button.scissors {
+        justify-self: center; /* Center the buttons horizontally on smaller screens */
+    }
 }
