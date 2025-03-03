@@ -95,6 +95,7 @@
   position: relative;
   width: 300px;
   height: 300px;
+  margin: 5em;
   justify-content: center; /* Center the grid horizontally */
 }
 
