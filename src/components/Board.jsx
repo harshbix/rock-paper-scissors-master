@@ -3,7 +3,12 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Board() {
   const items = ["ROCK", "PAPER", "SCISSORS"];
-  const score = 17;
+
+  const RandomNumber = (min , max) => 
+  {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  const score = RandomNumber(1, 100);
   return (
     <>
       <div className="board-container p-3">
