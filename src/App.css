@@ -16,7 +16,7 @@
 }
 .board-container {
   display: grid;
-  grid-template-columns: 10fr 2fr;
+  grid-template-columns: 11fr 1.5fr;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 10px;
 }
@@ -24,34 +24,39 @@
   display: grid;
   grid-template-rows: repeat(1fr);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 36px;
   gap: 0;
   line-height: 1;
 }
 
-.score {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+.all {
   border-radius: 10px;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  gap: 0;
 }
 .score span
 {
     color: hsl(229, 64%, 46%);
-    margin-bottom: -10px;
     font-size: 12px;
-    text-align: center;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
 }
-.score h1 {
-  font-size: 3.5rem;
+.score .no {
+  font-size: 3.8rem;
   font-weight: 700;
   color: hsl(229, 25%, 31%);
+  margin-top: 0;
+  padding: 0 !important;
 }
 @media (min-width: 650px) {
-  .cont-container {
-    padding: 0 15% 0 15%;
-  }
+.cont-container {
+    padding: 0 20% 0 20%;
+}
+
 }
