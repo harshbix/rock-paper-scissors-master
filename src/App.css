@@ -62,6 +62,40 @@
   padding-bottom: 12px;
   margin: 0;
 }
+
+@media (min-width: 1366px) {
+  .cont-container {
+    padding: 0 20%;
+  }
+  .items {
+    font-size: 3rem;
+  }
+  .score span {
+    font-size: 1rem;
+  }
+  .score .no {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .cont-container {
+    padding: 0 10%;
+  }
+  .items {
+    font-size: 1.5rem;
+  }
+  .score span {
+    font-size: 0.6rem;
+  }
+  .score .no {
+    font-size: 2.5rem;
+  }
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
 @media (min-width: 650px) {
   .cont-container {
     padding: 0 25% 0 25%;
