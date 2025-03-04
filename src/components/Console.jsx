@@ -71,10 +71,10 @@ const Console = ({ onSelection }) => {
                                 <button className="play-again" onClick={handlePlayAgain}>PLAY AGAIN</button>
                             </div>
                             <div className="result-item">
-                                <div className={`selected-button ${selected}`}>
+                                <div className={`console-button ${selected}`}>
                                     <img src={`${source}icon-${selected}.svg`} alt={selected} />
                                 </div>
-                                <div className={`selected-button ${computerSelection}`}>
+                                <div className={`console-button ${computerSelection}`}>
                                     <img src={`${source}icon-${computerSelection}.svg`} alt={computerSelection} />
                                 </div>
                             </div>
