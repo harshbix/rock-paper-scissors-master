@@ -196,3 +196,77 @@
     justify-self: center; /* Center the buttons horizontally on smaller screens */
   }
 }
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 20px;
+}
+
+.result {
+  display: flex;
+  flex-direction: row; /* Aligns children in a row */
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Space between user, status, and computer */
+  text-align: center;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column; /* Keeps the button and text centered */
+  justify-content: center;
+  align-items: center;
+}
+
+
+.result-status {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(229, 64%, 46%);
+  margin-bottom: 10px;
+}
+
+.play-again {
+  background-color: hsl(229, 64%, 46%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.play-again:hover {
+  background-color: hsl(229, 64%, 36%);
+}
+
+.selected-button {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 50%, #e0e0e0 100%);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3), 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.selected-button img {
+  width: 60%;
+  height: 60%;
+}
+
+.selected-button.rock {
+  border-color: red;
+}
+
+.selected-button.paper {
+  border-color: blue;
+}
+
+.selected-button.scissors {
+  border-color: orange;
+}
