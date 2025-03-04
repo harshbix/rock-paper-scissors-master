@@ -14,6 +14,8 @@
 #root {
   background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 .cont-container {
   padding: 5%;
