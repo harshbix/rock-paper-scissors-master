@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Result = ({ selected, computerSelection, status, onPlayAgain }) => {
+const Result = ({ selected, computerSelection, status, onPlayAgain, onWin }) => {
   const source = "../../images/";
+
+  useEffect(() => {
+    if (status === "You Win") {
+      onWin(); // Increment the score when the user wins
+    }
+  }, [status, onWin]);
 
   return (
     <div className="result-container">
@@ -29,3 +35,4 @@ const Result = ({ selected, computerSelection, status, onPlayAgain }) => {
 };
 
 export default Result;
+

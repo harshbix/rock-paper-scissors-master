@@ -206,6 +206,7 @@
 }
 
 .result {
+  margin-top: 70px;
   display: flex;
   flex-direction: row; /* Keep choices in a single row */
   justify-content: space-between; /* Space between elements */
@@ -232,7 +233,7 @@
 .result-status {
   font-size: 2rem;
   font-weight: bold;
-  color: hsl(229, 64%, 46%);
+  color: white;
   margin-bottom: 10px; /* Space between status and button */
 }
 
