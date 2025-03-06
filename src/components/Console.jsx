@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
+import Result from "./Result";
 
 const Console = ({ onSelection }) => {
   const [selected, setSelected] = useState(null);
@@ -11,15 +12,20 @@ const Console = ({ onSelection }) => {
   const images = ["icon-paper.svg", "icon-rock.svg", "icon-scissors.svg"];
   const choices = ["paper", "rock", "scissors"];
 
-  const getComputerChoice = () => {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+  const getComputerChoice = (userChoice) => {
+    let randomChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    // Reduce draws: If the computer initially picks the same as the user, re-pick with 50% probability
+    if (randomChoice === userChoice && Math.random() < 0.5) {
+      const filteredChoices = choices.filter(choice => choice !== userChoice);
+      randomChoice = filteredChoices[Math.floor(Math.random() * filteredChoices.length)];
+    }
+
     return randomChoice;
   };
 
   const getResult = (userChoice, computerChoice) => {
-    if (userChoice === computerChoice) {
-      return "DRAW";
-    }
+    if (userChoice === computerChoice) return "DRAW";
     if (
       (userChoice === "rock" && computerChoice === "scissors") ||
       (userChoice === "scissors" && computerChoice === "paper") ||
@@ -31,14 +37,11 @@ const Console = ({ onSelection }) => {
   };
 
   const handleClick = (value) => {
-    const computerChoice = getComputerChoice();
-    const result = getResult(value, computerChoice);
-
+    const computerChoice = getComputerChoice(value);
     setSelected(value);
     setComputerSelection(computerChoice);
-    setStatus(result);
+    setStatus(getResult(value, computerChoice));
     setShowResult(true);
-
     onSelection(value);
   };
 
@@ -51,48 +54,20 @@ const Console = ({ onSelection }) => {
 
   return (
     <div className="console-container">
-      <div className="console">
-        {!showResult ? (
-          <div className="console-body">
-            {images.map((image, index) => {
-              const value = image.split("-")[1].split(".")[0];
-              return (
-                <button
-                  key={index}
-                  className={`console-button ${value}`}
-                  onClick={() => handleClick(value)}
-                >
-                  <img src={`${source}${image}`} alt={value} />
-                </button>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="result-container">
-            <div className="result">
-              <div className="result-item">
-                <div
-                  className={`console-button ${selected} ${selected}-selected`}
-                >
-                  <img src={`${source}icon-${selected}.svg`} alt={selected} />
-                </div>
-                <div className="result-item">
-                  <div className="result-status">{status}</div>
-                  <button className="play-again" onClick={handlePlayAgain}>
-                    PLAY AGAIN
-                  </button>
-                </div>
-                <div className={`console-button ${computerSelection}`}>
-                  <img
-                    src={`${source}icon-${computerSelection}.svg`}
-                    alt={computerSelection}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+      {!showResult ? (
+        <div className="console">
+          {images.map((image, index) => {
+            const value = image.split("-")[1].split(".")[0];
+            return (
+              <button key={index} className={`console-button ${value}`} onClick={() => handleClick(value)}>
+                <img src={`${source}${image}`} alt={value} />
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        <Result selected={selected} computerSelection={computerSelection} status={status} onPlayAgain={handlePlayAgain} />
+      )}
     </div>
   );
 };
