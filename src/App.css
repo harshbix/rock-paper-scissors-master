@@ -207,26 +207,33 @@
 
 .result {
   display: flex;
-  flex-direction: row; /* Aligns children in a row */
-  justify-content: center;
+  flex-direction: row; /* Keep choices in a single row */
+  justify-content: space-between; /* Space between elements */
   align-items: center;
-  gap: 50px; /* Space between user, status, and computer */
+  gap: 80px; /* Adjust spacing */
   text-align: center;
 }
 
 .result-item {
   display: flex;
-  flex-direction: column; /* Keeps the button and text centered */
+  flex-direction: row; /* Arrange everything in a row */
   justify-content: center;
   align-items: center;
+  gap: 40px; /* Space between player's choice, middle section, and computer's choice */
 }
 
+.result-middle {
+  display: flex;
+  flex-direction: column; /* Stack status and play again button */
+  align-items: center;
+  justify-content: center;
+}
 
 .result-status {
   font-size: 2rem;
   font-weight: bold;
   color: hsl(229, 64%, 46%);
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space between status and button */
 }
 
 .play-again {

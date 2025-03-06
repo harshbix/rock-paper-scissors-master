@@ -6,17 +6,22 @@ const Result = ({ selected, computerSelection, status, onPlayAgain }) => {
   return (
     <div className="result-container">
       <div className="result">
-        <div className="result-item">
-          <div className={`console-button ${selected}`}>
-            <img src={`${source}icon-${selected}.svg`} alt={selected} />
-          </div>
+        {/* Player's choice */}
+        <div className={`console-button ${selected}`}>
+          <img src={`${source}icon-${selected}.svg`} alt={selected} />
+        </div>
+
+        {/* Status and Play Again button in the center */}
+        <div className="result-middle">
           <div className="result-status">{status}</div>
           <button className="play-again" onClick={onPlayAgain}>
             PLAY AGAIN
           </button>
-          <div className={`console-button ${computerSelection}`}>
-            <img src={`${source}icon-${computerSelection}.svg`} alt={computerSelection} />
-          </div>
+        </div>
+
+        {/* Computer's choice */}
+        <div className={`console-button ${computerSelection}`}>
+          <img src={`${source}icon-${computerSelection}.svg`} alt={computerSelection} />
         </div>
       </div>
     </div>
