@@ -283,4 +283,10 @@
 {
   height: 220px;
   width: 220px;
+  margin: 15px 0;
+}
+
+.result-button:hover
+{
+  transform: scaleX(1);
 }
