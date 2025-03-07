@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 
-const Result = ({ selected, computerSelection, status, onPlayAgain, onWin }) => {
+const Result = ({
+  selected,
+  computerSelection,
+  status,
+  onPlayAgain,
+  onWin,
+}) => {
   const source = "../../images/";
 
   useEffect(() => {
@@ -13,8 +19,11 @@ const Result = ({ selected, computerSelection, status, onPlayAgain, onWin }) => 
     <div className="result-container">
       <div className="result">
         {/* Player's choice */}
-        <div className={`console-button ${selected}`}>
-          <img src={`${source}icon-${selected}.svg`} alt={selected} />
+        <div>
+          <div className={`console-button ${selected} result-button`}>
+            <img src={`${source}icon-${selected}.svg`} alt={selected} />
+          </div>
+          <h5>YOU PICKED</h5>
         </div>
 
         {/* Status and Play Again button in the center */}
@@ -26,8 +35,14 @@ const Result = ({ selected, computerSelection, status, onPlayAgain, onWin }) => 
         </div>
 
         {/* Computer's choice */}
-        <div className={`console-button ${computerSelection}`}>
-          <img src={`${source}icon-${computerSelection}.svg`} alt={computerSelection} />
+        <div>
+          <div className={`console-button ${computerSelection}  result-button`}>
+            <img
+              src={`${source}icon-${computerSelection}.svg`}
+              alt={computerSelection}
+            />
+          </div>
+          <h5>THE HOUSE PICKED</h5>
         </div>
       </div>
     </div>
@@ -35,4 +50,3 @@ const Result = ({ selected, computerSelection, status, onPlayAgain, onWin }) => 
 };
 
 export default Result;
-

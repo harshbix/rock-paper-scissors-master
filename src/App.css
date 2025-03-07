@@ -238,8 +238,8 @@
 }
 
 .play-again {
-  background-color: hsl(229, 64%, 46%);
-  color: white;
+  background-color: white;
+  color: blue;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -248,7 +248,7 @@
 }
 
 .play-again:hover {
-  background-color: hsl(229, 64%, 36%);
+  background-color: rgb(183, 183, 183);
 }
 
 .selected-button {
@@ -277,4 +277,10 @@
 
 .selected-button.scissors {
   border-color: orange;
+}
+
+.result-button
+{
+  height: 220px;
+  width: 220px;
 }
