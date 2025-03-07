@@ -31,9 +31,9 @@ const Console = ({ onSelection }) => {
       (userChoice === "scissors" && computerChoice === "paper") ||
       (userChoice === "paper" && computerChoice === "rock")
     ) {
-      return "YOU WON";
+      return "YOU WON!!";
     }
-    return "YOU LOSE";
+    return "YOU LOSE!!";
   };
 
   const handleClick = (value) => {
