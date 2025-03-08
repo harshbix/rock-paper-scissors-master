@@ -292,3 +292,35 @@
 {
   transform: scaleX(1);
 }
+@media (max-width: 768px) {
+  .result {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for choices */
+    grid-template-rows: auto auto; /* Auto rows for content */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .result-button {
+    width: 120px; /* Smaller buttons */
+    height: 120px;
+  }
+
+  .result-middle {
+    grid-column: 1 / -1; /* Full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .result-status {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .play-again {
+    width: 100%;
+    max-width: 250px;
+  }
+}
