@@ -36,7 +36,11 @@ const Result = ({
 
         {/* Computer's choice */}
         <div>
-          <div className={`console-button ${computerSelection}  result-button`}>
+          <div
+            className={`console-button ${computerSelection}  result-button ${
+              "result-".computerSelection
+            }`}
+          >
             <img
               src={`${source}icon-${computerSelection}.svg`}
               alt={computerSelection}

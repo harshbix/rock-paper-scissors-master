@@ -281,15 +281,13 @@
   border-color: orange;
 }
 
-.result-button
-{
+.result-button {
   height: 220px;
   width: 220px;
   margin: 15px 0;
 }
 
-.result-button:hover
-{
+.result-button:hover {
   transform: scaleX(1);
 }
 @media (max-width: 768px) {
@@ -318,7 +316,6 @@
     font-size: 4rem;
     font-weight: bold;
   }
-
   .play-again {
     width: 100%;
     max-width: 250px;
