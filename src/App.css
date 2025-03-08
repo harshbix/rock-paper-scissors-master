@@ -295,9 +295,8 @@
 @media (max-width: 768px) {
   .result {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns for choices */
-    grid-template-rows: auto auto; /* Auto rows for content */
-    gap: 20px;
+    grid-template-columns: 6fr 6fr 1fr; /* Two equal columns for choices */
+    gap: 30px;
     text-align: center;
   }
 
@@ -312,10 +311,11 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    order: 3;
   }
 
   .result-status {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
   }
 
