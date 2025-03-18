@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Board from "./Board";
 import "../App.css";
-import Console from "./Console.jsx";
+import Console from "./console.jsx";
 import Result from "./Result"; // Import Result component
 
 const Container = () => {
