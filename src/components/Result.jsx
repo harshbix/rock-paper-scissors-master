@@ -26,7 +26,7 @@ const Result = ({
           <h5>YOU PICKED</h5>
         </div>
 
-        {/* Status and Play Again button in the center */}
+        {/* Status and Play Again button in the center */} 
         <div className="result-middle">
           <div className="result-status">{status}</div>
           <button className="play-again" onClick={onPlayAgain}>
